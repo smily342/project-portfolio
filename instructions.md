@@ -2,21 +2,17 @@
 
 ## Instructions
 
-The portfolio will be a great test of your React, HTML and CSS skills but we will also take the opportunity to get started with accessibility and build websites for everyone -- something every frontend developer should know. Don't save until the last day to do the testing -- it's very much the task of this project and will take some time.
+<img src="https://github.com/Technigo/project-portfolio/blob/main/portfolio-designs.png" alt="" />
 
-<img src="https://github.com/Technigo/project-portfolio/blob/main/Preview-PortfolioWebDev-Technigo.png" alt="" />
-
-We've created a [portfolio design](https://www.figma.com/file/ZMIWBimuoSDHXp7CdtkrA3/Web-Dev-Portfolio-%7C-new-version?type=design&node-id=1862-60&mode=design&t=clNc4tmMHa8uA3GO-0) for you that you should follow. You are free to change:
+We've created some [portfolio designs](https://www.figma.com/file/ZMIWBimuoSDHXp7CdtkrA3/Web-Dev-Portfolio-%7C-new-version?type=design&node-id=1862-60&mode=design&t=clNc4tmMHa8uA3GO-0) for you that you should follow. You are free to change:
 
 - the colours (find inspiration on [ColorHunt](https://colorhunt.co/) or [Adobe](https://color.adobe.com/create/color-wheel/))
 - the images
 - and, of course, all the content
 
-If you have any written articles or blog posts that you consider relevant, there's a section for that in the portfolio. If you don't have that (yet), feel free to leave that part out.
-
 We want you to practise following a design strictly. This is normally how the workflow is for a Frontend Developer: to work together with a designer who provides a design file (in Figma) for you to translate into code.
 
-If you work as a designer and really dislike our design, you could pitch to us why you would do a better job and hand in your own design file for us to evaluate. But otherwise, this design comes from an experienced designer in collaboration with the expertise of a recruiter who knows what recruiters look at.
+If you work as a designer and really dislike our designs, you could pitch to us why you would do a better job and hand in your own design file for us to evaluate. But otherwise, these designs comes from an experienced designer in collaboration with the expertise of a recruiter who knows what recruiters look at.
 
 ## Content guide
 
@@ -30,13 +26,13 @@ Give a short summary/name-dropping of all the technologies, tools, libraries and
 
 ### **Featured projects**
 
-Mention the projects you are most proud of here; feel free to add all of them! The more, the merrier at the beginning of your developer career. Make sure to mention all technologies, libraries or APIs you have used. Don't feel like you are repeating yourself. As a recruiter looking for a React developer – the more React is mentioned – the better. If you have other code projects unrelated to this course, feel free to add them, too. For every project, add a link to the GitHub repo and a link to the deployed page, where the project can be viewed live. Add a thumbnail image that shows your project and a short summary of what the project is about.
+Mention the projects you are most proud of here; feel free to add all of them! The more, the merrier at the beginning of your developer career. Make sure to mention all technologies, libraries or APIs you have used. Don't feel like you are repeating yourself. As a recruiter looking for a React developer – the more React is mentioned – the better. If you have other code projects unrelated to this course, feel free to add them too. For every project, add a link to the GitHub repo and a link to the deployed page, where the project can be viewed live. Add a thumbnail image that shows your project and a short summary of what the project is about.
 
 ### **My words**
 
 Presenting yourself and your thoughts about programming, career change, remote work, and bootcamping can be extremely helpful for recruiters to gain insight into what you're up to. It can be a great way to show off your knowledge and skills - and that you reflect on it.
 
-During the career coaching program, you will be asked to post reflections on LinkedIn connected to the different topics covered in the bootcamp, this is an excellent opportunity to showcase your reflections to future employers. You can leave this empty for now and return to it when you have progressed further in the career coaching program. You can also include reflections that you have posted on social media in this section if you have done so.
+During the career program, you will be asked to post reflections on LinkedIn connected to the different topics covered in the bootcamp, this is an excellent opportunity to showcase your reflections to future employers. Include the reflections that you have posted on social media in this section.
 
 ### **Skills**
 
@@ -49,7 +45,7 @@ Make it super clear how a person can contact you. Again, add the social media li
 ## Tips on how to work with this project
 
 - Begin with forking and cloning the repo as usual. Since there is no starter code this week, you must create it by utilising [Vite](https://www.notion.so/Vite-15cd27c673d14033a1aae2d63dd37b04?pvs=21) → `npm create vite@latest my-portfolio --template`
-- Before starting the coding, consider what components you need and break the design into reusable and manageable pieces. Has your team already created some components during the team session? Great—use them!
+- Before starting the coding, consider what components you need and break the design up into reusable and manageable pieces. Has your team already created some components during the team session? Great — use them!
 - Consider how you will get the data, e.g. the projects and articles. Do you want to go with JSON files all the way (see `projects.json` as an example), or do you want to go with the stretch goal that uses the GitHub API to get all projects?
 - When picking colours, remember to consider accessibility so that the contrast is sufficient.
 - Remember that your portfolio will continue to evolve and grow as you progress in your coding journey. Happy coding!
@@ -75,7 +71,7 @@ To use the icons from the design, simply mark the icon you want to export and sa
     - You should have a score of at least 95 in [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview)
     - All images should have alt attributes and proper sizes
     - All contrasts should be OK
-- Follow the guidelines on [how to write good code](https://www.notion.so/Guidelines-for-how-to-write-good-code-59abdd4307a24f5ca7914d566326f4df?pvs=21)
+- Follow the guidelines on how to write clean code
 
 ## Stretch goals
 
