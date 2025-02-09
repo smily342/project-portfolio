@@ -20,10 +20,7 @@ export const Skills = () => {
                     <ul>
                         <li>VSCode</li>
                         <li>Postman</li>
-                        <li>Adobe Photoshop</li>
-                        <li>Adobe Illustrator</li>
                         <li>Figma</li>
-                        <li>Keynote</li>
                         <li>Slack</li>
                     </ul>
                 </div>
