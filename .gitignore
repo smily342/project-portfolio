@@ -1,0 +1,73 @@
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dossiers de build et dépendances
+node_modules/
+dist/
+dist-ssr/
+
+# Fichiers locaux
+*.local
+
+# Dossiers et fichiers d'éditeur
+.vscode/
+! .vscode/extensions.json
+.idea/
+.DS_Store
+
+# Fichiers générés par Visual Studio et autres outils
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+
+# Fichiers système Windows spécifiques
+**/AppData/
+**/Cookies/
+**/Local Settings/
+**/Menu Démarrer/
+**/Mes documents/
+**/Modèles/
+**/Recent/
+**/SendTo/
+**/Voisinage d'impression/
+**/Voisinage réseau/
+**/Documents/
+**/Downloads/
+**/Favorites/
+**/Links/
+**/Music/
+**/OneDrive/
+**/Pictures/
+**/Saved Games/
+**/Searches/
+**/Tracing/
+**/Videos/
+
+# Fichiers système Windows
+NTUSER.DAT*
+NTUSER.ini
+desktop.ini
+
+# Fichiers temporaires et caches
+*.tmp
+*.bak
+*.swp
+*.swo
+*.log
+*.DS_Store
+
+# Fichiers de configuration utilisateur
+**/.bash_history
+**/.gitconfig
+**/.lesshst
+**/.node_repl_history
+**/.quokka/
