@@ -1,11 +1,13 @@
+import profile from "../assets/profile.jpg";
 
 export const LetsTalk = () => {
     return (
         <section className="letsTalk">
             <h2>Let's Talk</h2>
 
-            <img className="letsTalkAvatar" src="/sherry.jpg" alt="Brian D" />
             <div className="letsTalkText">
+                    <img className="avatar" src={profile} alt="Brian Dadi" />
+                <br />
                 Brian Dadi 
                 <br />
                 +41(0)79 364 37 43
