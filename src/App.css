@@ -4,7 +4,14 @@ html {
   box-sizing: border-box;
 }
 
-*,
+html, body {
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 *:before,
 *:after {
   box-sizing: inherit;
@@ -211,7 +218,7 @@ body {
   }
 }
 
-.projectDemo {}
+
 
 .projectCode {}
 
@@ -242,9 +249,10 @@ body {
   margin: 0;
   padding: 16px;
   text-align: center;
-  color: #ff4575;
   line-height: 66px;
+  color: #b0003a; 
 }
+
 
 .posts {
   display: flex;
@@ -587,13 +595,6 @@ body {
     font-size: 32px;
   }
 
-  .projectDescription {}
-
-  .projectTechnologies {}
-
-  .projectLinks {}
-
-  .projectLinks a {}
 
   .posts {
     display: grid;
@@ -618,4 +619,47 @@ body {
   }
 }
 
-;
+
+
+@media (prefers-color-scheme: dark) {
+  .myWords {
+    background-color: #1e1e1e !important;
+  }
+
+  .myWords h2 {
+    color: #f2f2f2 !important;
+  }
+
+  .postDate {
+    background: #333 !important;
+    color: #fff !important;
+  }
+
+  .postTitle,
+  .postDescription,
+  .postLink {
+    color: #e0e0e0 !important;
+  }
+
+  .postLink {
+    background-color: #2a2a2a !important;
+  }
+
+  .postLink:hover {
+    background-color: #3a3a3a !important;
+  }
+
+  .skillsCategory:nth-child(4) h3 {
+    color: #081670 !important; /* texte plus foncé pour contraste sur fond jaune */
+  }
+}
+body, main, section, .project, .posts, .skillsCategories {
+  max-width: 100vw;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.projectLinks a,
+.postLink {
+  max-width: 100%;
+  flex-wrap: wrap;
+}

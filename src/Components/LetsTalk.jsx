@@ -18,7 +18,9 @@ export const LetsTalk = () => {
             </div>
 
             <div className="letsTalkIcons">
-                <a href="https://www.linkedin.com/in/brian-d-112a67173/">
+            <a
+  href="https://www.linkedin.com/in/brian-d-112a67173/"
+  aria-label="LinkedIn profile">
                     <svg
                         width="32"
                         height="32"
@@ -33,7 +35,10 @@ export const LetsTalk = () => {
                     </svg>
                 </a>
 
-                <a href="https://github.com/smily342">
+                <a
+          href="https://github.com/smily342"
+          aria-label="GitHub profile">
+
                     <svg
                         width="24"
                         height="24"
@@ -48,7 +53,10 @@ export const LetsTalk = () => {
                     </svg>
                 </a>
 
-                <a href="https://stackoverflow.com/users/26994737/brian-dadi">
+                <a
+          href="https://stackoverflow.com/users/26994737/brian-dadi"
+          aria-label="Stack Overflow profile"
+        >
                     <svg
                         width="33"
                         height="32"
