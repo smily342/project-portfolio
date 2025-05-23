@@ -3,8 +3,7 @@ import profile from "../assets/profile.jpg";
 export const LetsTalk = () => {
     return (
         <section className="letsTalk">
-            <h2>Let's Talk</h2>
-
+            <h2>Lets Talk</h2>
             <div className="letsTalkText">
                     <img className="avatar" src={profile} alt="Brian Dadi" />
                 <br />
