@@ -8,7 +8,10 @@ html, body {
   overflow-x: hidden;
 }
 
-*,
+* {
+  box-sizing: border-box;
+}
+
 *:before,
 *:after {
   box-sizing: inherit;
@@ -19,6 +22,10 @@ body {
   flex-direction: column;
   margin: 0;
   line-height: 1.6;
+}
+
+body {
+  margin: 0;
 }
 
 .intro {
@@ -45,22 +52,10 @@ body {
   font-family: Montserrat, sans-serif;
   font-weight: 700;
   font-size: 32px;
-  color: #0b24f5; /* visible in light mode */
+  color: #0b24f5;
   margin: 0;
   line-height: 1;
   margin-bottom: 32px;
-}
-
-@media (min-width: 745px) {
-  .role {
-    font-size: 56px;
-  }
-}
-
-@media (min-width: 1281px) {
-  .role {
-    font-size: 80px;
-  }
 }
 
 .avatar {
@@ -71,13 +66,16 @@ body {
   grid-area: avatar;
 }
 
+
+
 .bio {
   grid-area: bio;
   font-family: Hind, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 28.2px;
-  margin: 0 0 32px 0;
+  margin: 0;
+  margin-bottom: 32px;
 }
 
 .arrow {
@@ -139,12 +137,15 @@ body {
 .project {
   display: flex;
   flex-direction: column;
-  padding: 0 16px;
 }
 
 .projectImage {
-  border-left: 10px solid #0b24f5;
-  border-bottom: 10px solid #0b24f5;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-left-width: 10px;
+  border-bottom-width: 10px;
+  border-style: solid;
+  border-color: #0b24f5;
   grid-area: image;
 }
 
@@ -211,11 +212,15 @@ body {
   font-weight: 600;
   line-height: 24.38px;
   text-align: left;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
 }
 
-.projectLinks a:hover {
-  background-color: #e5e5e5;
-}
+
+
+.projectCode {}
 
 .waves {
   max-width: 100%;
@@ -245,8 +250,9 @@ body {
   padding: 16px;
   text-align: center;
   line-height: 66px;
-  color: #b0003a;
+  color: #b0003a; 
 }
+
 
 .posts {
   display: flex;
@@ -259,9 +265,14 @@ body {
 }
 
 .postImage {
-  border-left: 10px solid #ff4575;
-  border-bottom: 10px solid #ff4575;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-left-width: 10px;
+  border-bottom-width: 10px;
+  border-style: solid;
+  border-color: #ff4575;
   width: 100%;
+  height: auto;
   aspect-ratio: 290 / 181;
   object-fit: cover;
   display: block;
@@ -311,10 +322,10 @@ body {
   font-weight: 600;
   line-height: 24.38px;
   text-align: left;
-}
 
-.postLink:hover {
-  background-color: #e5e5e5;
+  &:hover {
+    background-color: #e5e5e5;
+  }
 }
 
 .skills {
@@ -343,6 +354,8 @@ body {
   text-align: center;
 }
 
+.skillsCategory {}
+
 .skillsCategory h3 {
   font-family: Montserrat;
   font-size: 24px;
@@ -362,10 +375,8 @@ body {
 }
 
 .skillsCategory:nth-child(3) h3 {
-  background-color: #4e9c6d;
-  color: #ffffff;
+  background: #6db486;
 }
-
 
 .skillsCategory:nth-child(4) h3 {
   background: #ffde30;
@@ -438,19 +449,178 @@ body {
   margin-right: 10px;
 }
 
-body, main, section, .project, .posts, .skillsCategories {
-  max-width: 100vw;
-  overflow-wrap: break-word;
-  word-break: break-word;
+@media (min-width: 745px) {
+  .intro {
+    grid-template-columns: 164px 1fr;
+    grid-template-areas:
+      "name name"
+      "role role"
+      "avatar bio"
+      "arrow arrow";
+    max-width: 958px;
+    margin: 0 auto;
+    padding: 128px 16px;
+  }
+
+  .name {
+    font-size: 29px;
+  }
+
+  .role {
+    font-size: 56px;
+  }
+
+  .bio {
+    margin-left: 16px;
+    align-self: center;
+  }
+
+  .tech p {
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .project {
+    display: grid;
+    grid-template-areas:
+      "image title"
+      "image description"
+      "image technologies"
+      "image ."
+      "image links";
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content min-content min-content auto min-content;
+    column-gap: 32px;
+
+    width: 100%;
+    padding: 0 16px;
+    max-width: 958px;
+  }
+
+  .projectImage {
+    overflow: hidden;
+    width: 100%;
+    object-fit: cover;
+
+    aspect-ratio: 290 / 181;
+  }
+
+  .projectTitle {}
+
+  .projectDescription {}
+
+  .projectTechnologies {
+    align-items: flex-start;
+  }
+
+  .projectLinks {
+    flex-direction: row;
+    column-gap: 16px;
+    align-items: flex-start;
+  }
+
+  .projectLinks a {}
+
+  .posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 958px;
+    row-gap: 64px;
+    column-gap: 32px;
+  }
+
+  .skillsCategories {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    justify-content: space-between;
+    max-width: 958px;
+    row-gap: 32px;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 16px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .skillsCategories li {
+    text-align: left;
+  }
 }
 
-.projectLinks a,
-.postLink {
-  max-width: 100%;
-  flex-wrap: wrap;
+@media (min-width: 1281px) {
+  .intro {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .name {
+    font-size: 32px;
+  }
+
+  .role {
+    font-size: 80px;
+  }
+
+  .tech {
+    flex-direction: row;
+    column-gap: 64px;
+    padding: 256px 0;
+  }
+
+  .tech p {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: left;
+    max-width: 700px;
+    text-shadow: none;
+  }
+
+  .featuredProjects h2 {
+    font-size: 80px;
+  }
+
+  .project {
+    width: 958px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .projectImage {
+    width: 100%;
+  }
+
+  .projectTitle {
+    font-size: 32px;
+  }
+
+
+  .posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 958px;
+    row-gap: 64px;
+    column-gap: 32px;
+  }
+
+  .post {
+    padding: 0;
+  }
+
+  .skillsCategories {
+    display: flex;
+    flex-direction: row;
+    column-gap: 64px;
+    width: 958px;
+    justify-content: space-between;
+
+    padding: 0;
+  }
 }
 
-/* DARK MODE FIXES */
+
+
 @media (prefers-color-scheme: dark) {
   .myWords {
     background-color: #1e1e1e !important;
@@ -478,55 +648,58 @@ body, main, section, .project, .posts, .skillsCategories {
   .postLink:hover {
     background-color: #3a3a3a !important;
   }
-}
 
-@media (prefers-color-scheme: dark) {
-  .skillsCategory:nth-child(3) h3 {
-    background-color: #2a7f5e !important;
-    color: #ffffff !important;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
   .skillsCategory:nth-child(4) h3 {
-    background-color: #ffde30 !important;
-    color: #000000 !important;
+    color: #081670 !important; /* texte plus foncé pour contraste sur fond jaune */
   }
+}
+body, main, section, .project, .posts, .skillsCategories {
+  max-width: 100vw;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.projectLinks a,
+.postLink {
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+.projectLinks {
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .role {
-    color: #ffffff !important;
-  }
+.projectLinks a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f0f0f0;
+  color: #333333;
+  border-radius: 22px;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
+
+.projectLinks a:hover {
+  background-color: #e0e0e0;
+}
+
+.projectLinks svg {
+  flex-shrink: 0;
+}
+/* Light mode par défaut */
+h3 {
+  color: #1a1a1a;              /* texte foncé */
+
+}
+
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
   h3 {
-    color: #ffffff !important;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  /* Force contraste maximal sur tous les h3 */
-  h3 {
-    color: #ffffff !important;
-    background-color: #000000 !important;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .skillsCategory h3 {
-    color: #ffffff !important;
-    background-color: #000000 !important;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .skillsCategory:nth-child(4) h3 {
-    background-color: #ffde30 !important;
-    color: #000000 !important; /* texte très foncé sur jaune */
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .skillsCategory:nth-child(3) h3 {
-    background-color: #6db486 !important;
-    color: #002b1d !important; /* vert très foncé pour meilleur contraste */
+    color: #ffffff;             /* texte clair */
+    background-color: #000000;  /* fond foncé */
   }
 }
