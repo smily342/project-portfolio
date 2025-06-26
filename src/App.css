@@ -494,6 +494,7 @@ body {
 /*                 UTILITY FIXES                      */
 /* -------------------------------------------------- */
 body, main, section, .project, .posts, .skillsCategories {
+  padding: 0 16px;
   max-width: 100vw;
   overflow-wrap: break-word;
   word-break: break-word;
